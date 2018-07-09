@@ -1,0 +1,52 @@
+C:\Users\user\documents\visual studio 2010\projects\e_exam\e_exam\bin\Debug\e_exam.exe.config
+C:\Users\user\documents\visual studio 2010\projects\e_exam\e_exam\bin\Debug\e_exam.exe
+C:\Users\user\documents\visual studio 2010\projects\e_exam\e_exam\bin\Debug\e_exam.pdb
+C:\Users\user\documents\visual studio 2010\projects\e_exam\e_exam\bin\Debug\e_exam.xml
+C:\Users\user\documents\visual studio 2010\projects\e_exam\e_exam\obj\x86\Debug\e_exam.Add_Exam.resources
+C:\Users\user\documents\visual studio 2010\projects\e_exam\e_exam\obj\x86\Debug\e_exam.Add_Stream.resources
+C:\Users\user\documents\visual studio 2010\projects\e_exam\e_exam\obj\x86\Debug\e_exam.Resources.resources
+C:\Users\user\documents\visual studio 2010\projects\e_exam\e_exam\obj\x86\Debug\e_exam.Add_Student.resources
+C:\Users\user\documents\visual studio 2010\projects\e_exam\e_exam\obj\x86\Debug\e_exam.Add_Subjects.resources
+C:\Users\user\documents\visual studio 2010\projects\e_exam\e_exam\obj\x86\Debug\e_exam.vbproj.GenerateResource.Cache
+C:\Users\user\documents\visual studio 2010\projects\e_exam\e_exam\obj\x86\Debug\e_exam.exe
+C:\Users\user\documents\visual studio 2010\projects\e_exam\e_exam\obj\x86\Debug\e_exam.xml
+C:\Users\user\documents\visual studio 2010\projects\e_exam\e_exam\obj\x86\Debug\e_exam.pdb
+C:\Users\user\documents\visual studio 2010\projects\e_exam\e_exam\obj\x86\Debug\e_exam.Marks_Entry_full_paper.resources
+C:\Users\user\documents\visual studio 2010\projects\e_exam\e_exam\obj\x86\Debug\e_exam.MarksEntry_Normal.resources
+C:\Users\user\documents\visual studio 2010\projects\e_exam\e_exam\obj\x86\Debug\e_exam.main_startpage.resources
+C:\Users\user\Documents\Visual Studio 2010\Projects\e_exam\e_exam\obj\x86\Debug\e_exam.vbprojResolveAssemblyReference.cache
+C:\Users\user\Documents\Visual Studio 2010\Projects\e_exam\e_exam\obj\x86\Debug\e_exam.SetServer.resources
+C:\Users\user\Documents\Visual Studio 2010\Projects\e_exam\e_exam\obj\x86\Debug\e_exam.Exam_Report.resources
+C:\Users\user\Documents\Visual Studio 2010\Projects\e_exam\e_exam\obj\x86\Debug\e_exam.Manage_Exams.resources
+C:\Users\user\Documents\Visual Studio 2010\Projects\e_exam\e_exam\obj\x86\Debug\e_exam.manage_streams.resources
+C:\Users\user\Documents\Visual Studio 2010\Projects\e_exam\e_exam\obj\x86\Debug\e_exam.manage_students.resources
+C:\Users\user\Documents\Visual Studio 2010\Projects\e_exam\e_exam\obj\x86\Debug\e_exam.vbproj.ResolveComReference.cache
+C:\Users\user\Documents\Visual Studio 2010\Projects\e_exam\e_exam\obj\x86\Debug\e_exam.Termly_report.resources
+C:\Users\user\Documents\Visual Studio 2010\Projects\e_exam\e_exam\obj\x86\Debug\e_exam.Form1.resources
+C:\Users\user\Documents\Visual Studio 2010\Projects\e_exam\e_exam\obj\x86\Debug\RdlCompile.cache
+C:\Users\user\Documents\Visual Studio 2010\Projects\e_exam\e_exam\obj\x86\Debug\RdlCompile.compiled
+D:\e_exam\e_exam\obj\x86\Debug\e_exam.vbprojResolveAssemblyReference.cache
+D:\e_exam\e_exam\obj\x86\Debug\e_exam.vbproj.ResolveComReference.cache
+D:\e_exam\e_exam\obj\x86\Debug\e_exam.main_startpage.resources
+D:\e_exam\e_exam\obj\x86\Debug\e_exam.Manage_Exams.resources
+D:\e_exam\e_exam\obj\x86\Debug\e_exam.manage_streams.resources
+D:\e_exam\e_exam\obj\x86\Debug\e_exam.manage_students.resources
+D:\e_exam\e_exam\obj\x86\Debug\e_exam.Marks_Entry_full_paper.resources
+D:\e_exam\e_exam\obj\x86\Debug\e_exam.Exam_Report.resources
+D:\e_exam\e_exam\obj\x86\Debug\e_exam.Form1.resources
+D:\e_exam\e_exam\obj\x86\Debug\e_exam.Termly_report.resources
+D:\e_exam\e_exam\obj\x86\Debug\e_exam.Add_Exam.resources
+D:\e_exam\e_exam\obj\x86\Debug\e_exam.Add_Stream.resources
+D:\e_exam\e_exam\obj\x86\Debug\e_exam.Resources.resources
+D:\e_exam\e_exam\obj\x86\Debug\e_exam.Add_Student.resources
+D:\e_exam\e_exam\obj\x86\Debug\e_exam.Add_Subjects.resources
+D:\e_exam\e_exam\obj\x86\Debug\e_exam.SetServer.resources
+D:\e_exam\e_exam\obj\x86\Debug\e_exam.MarksEntry_Normal.resources
+D:\e_exam\e_exam\obj\x86\Debug\e_exam.vbproj.GenerateResource.cache
+D:\e_exam\e_exam\obj\x86\Debug\e_exam.vbproj.CoreCompileInputs.cache
+D:\e_exam\e_exam\obj\x86\Debug\e_exam.exe
+D:\e_exam\e_exam\obj\x86\Debug\e_exam.xml
+D:\e_exam\e_exam\obj\x86\Debug\e_exam.pdb
+D:\e_exam\e_exam\bin\Debug\e_exam.exe.config
+D:\e_exam\e_exam\obj\x86\Debug\RdlCompile.cache
+D:\e_exam\e_exam\obj\x86\Debug\RdlCompile.compiled

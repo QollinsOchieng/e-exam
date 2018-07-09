@@ -1,0 +1,272 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EXAMModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="EXAMEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Class_teachers" EntityType="EXAMModel.Class_teachers" />
+    <EntitySet Name="Classes" EntityType="EXAMModel.Class" />
+    <EntitySet Name="Exams" EntityType="EXAMModel.Exam" />
+    <EntitySet Name="Streams" EntityType="EXAMModel.Stream" />
+    <EntitySet Name="Student_marks" EntityType="EXAMModel.Student_marks" />
+    <EntitySet Name="Subjects" EntityType="EXAMModel.Subject" />
+    <EntitySet Name="Teachers" EntityType="EXAMModel.Teacher" />
+    <EntitySet Name="Users" EntityType="EXAMModel.User" />
+    <FunctionImport Name="post_students">
+      <Parameter Name="Student_number" Mode="In" Type="String" />
+      <Parameter Name="Student_name" Mode="In" Type="String" />
+      <Parameter Name="DOB" Mode="In" Type="DateTime" />
+      <Parameter Name="Address" Mode="In" Type="String" />
+      <Parameter Name="Gender" Mode="In" Type="String" />
+      <Parameter Name="type" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <EntitySet Name="Normal_exam_marks" EntityType="EXAMModel.Normal_exam_marks" />
+    <EntitySet Name="Students" EntityType="EXAMModel.Student" />
+    <FunctionImport Name="post_streams">
+      <Parameter Name="strname" Mode="In" Type="String" />
+      <Parameter Name="type" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="post_exam" EntitySet="Exams" ReturnType="Collection(EXAMModel.Exam)">
+      <Parameter Name="Exam_code" Mode="In" Type="String" />
+      <Parameter Name="Exam_type" Mode="In" Type="String" />
+      <Parameter Name="Exam_name" Mode="In" Type="String" />
+      <Parameter Name="Term" Mode="In" Type="Int32" />
+      <Parameter Name="Week_no" Mode="In" Type="Int32" />
+      <Parameter Name="Target_class" Mode="In" Type="String" />
+      <Parameter Name="Created_by" Mode="In" Type="String" />
+      <Parameter Name="type" Mode="In" Type="Int32" />
+    </FunctionImport>
+  </EntityContainer>
+  <EntityType Name="Class_teachers">
+    <Key>
+      <PropertyRef Name="CID" />
+    </Key>
+    <Property Name="CID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Fname" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Lname" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Class" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Stream" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Tid" Type="Int32" Nullable="false" />
+    <Property Name="Status" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Class">
+    <Key>
+      <PropertyRef Name="Class_ID" />
+    </Key>
+    <Property Name="Class_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Class_name" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Exam">
+    <Key>
+      <PropertyRef Name="Exam_ID" />
+    </Key>
+    <Property Name="Exam_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Exam_code" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Exam_name" Type="String" Nullable="false" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="Term" Type="Int32" Nullable="false" />
+    <Property Name="Week_no" Type="Int32" Nullable="false" />
+    <Property Name="Target_class" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Created_by" Type="String" Nullable="false" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="Date_created" Type="DateTime" Nullable="false" />
+    <Property Name="Status" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="Exam_type" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Stream">
+    <Key>
+      <PropertyRef Name="StreamID" />
+    </Key>
+    <Property Name="StreamID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" DefaultValue="1" />
+    <Property Name="Stream_name" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Student_marks">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="Student_ID" Type="Int32" Nullable="false" />
+    <Property Name="Student_num" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Student_name" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="ExamID" Type="Int32" Nullable="false" />
+    <Property Name="ExamName" Type="String" Nullable="false" MaxLength="255" Unicode="true" FixedLength="false" />
+    <Property Name="ExamCode" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Stream" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Class" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="class_year" Type="Int32" Nullable="false" />
+    <Property Name="ENG" Type="Int32" Nullable="false" />
+    <Property Name="KISW" Type="Int32" Nullable="false" />
+    <Property Name="MATA" Type="Int32" />
+    <Property Name="MATB" Type="Int32" />
+    <Property Name="BIO" Type="Int32" />
+    <Property Name="CHEM" Type="Int32" />
+    <Property Name="PHYC" Type="Int32" />
+    <Property Name="GENSCI" Type="Int32" />
+    <Property Name="HIST" Type="Int32" />
+    <Property Name="CRE" Type="Int32" />
+    <Property Name="GEO" Type="Int32" />
+    <Property Name="IRE" Type="Int32" />
+    <Property Name="HRE" Type="Int32" />
+    <Property Name="HOMESCI" Type="Int32" />
+    <Property Name="ART" Type="Int32" />
+    <Property Name="AGRIC" Type="Int32" />
+    <Property Name="WOODW" Type="Int32" />
+    <Property Name="METALW" Type="Int32" />
+    <Property Name="BUILDCONSTR" Type="Int32" />
+    <Property Name="POWER_MECH" Type="Int32" />
+    <Property Name="ELEC" Type="Int32" />
+    <Property Name="DD" Type="Int32" />
+    <Property Name="AVIATION" Type="Int32" />
+    <Property Name="COMP" Type="Int32" />
+    <Property Name="FRENCH" Type="Int32" />
+    <Property Name="GER" Type="Int32" />
+    <Property Name="ARAB" Type="Int32" />
+    <Property Name="KSL" Type="Int32" />
+    <Property Name="MUSIC" Type="Int32" />
+    <Property Name="BUS" Type="Int32" />
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="ENG1" />
+    <Property Type="Int32" Name="ENG2" />
+    <Property Type="Int32" Name="ENG3" />
+    <Property Type="Int32" Name="KISW1" />
+    <Property Type="Int32" Name="KISW2" />
+    <Property Type="Int32" Name="KISW3" />
+    <Property Type="Int32" Name="MATA1" />
+    <Property Type="Int32" Name="MATA2" />
+    <Property Type="Int32" Name="MATB1" />
+    <Property Type="Int32" Name="MATB2" />
+    <Property Type="Int32" Name="BIO1" />
+    <Property Type="Int32" Name="BIO2" />
+    <Property Type="Int32" Name="BIO3" />
+    <Property Type="Int32" Name="CHEM1" />
+    <Property Type="Int32" Name="CHEM2" />
+    <Property Type="Int32" Name="CHEM3" />
+    <Property Type="Int32" Name="PHYC1" />
+    <Property Type="Int32" Name="PHYC2" />
+    <Property Type="Int32" Name="PHYC3" />
+    <Property Type="Int32" Name="HIST1" />
+    <Property Type="Int32" Name="HIST2" />
+    <Property Type="Int32" Name="CRE1" />
+    <Property Type="Int32" Name="CRE2" />
+    <Property Type="Int32" Name="GEO1" />
+    <Property Type="Int32" Name="GEO2" />
+    <Property Type="Int32" Name="IRE1" />
+    <Property Type="Int32" Name="IRE2" />
+    <Property Type="Int32" Name="HRE1" />
+    <Property Type="Int32" Name="HRE2" />
+    <Property Type="Int32" Name="HOMESCI1" />
+    <Property Type="Int32" Name="HOMESCI2" />
+    <Property Type="Int32" Name="HOMESCI3" />
+    <Property Type="Int32" Name="ART1" />
+    <Property Type="Int32" Name="ART2" />
+    <Property Type="Int32" Name="ART3" />
+    <Property Type="Int32" Name="AGRIC1" />
+    <Property Type="Int32" Name="AGRIC2" />
+    <Property Type="Int32" Name="AGRIC3" />
+    <Property Type="Int32" Name="WOODW1" />
+    <Property Type="Int32" Name="WOODW2" />
+    <Property Type="Int32" Name="METALW1" />
+    <Property Type="Int32" Name="METALW2" />
+    <Property Type="Int32" Name="BUILDCONSTR1" />
+    <Property Type="Int32" Name="BUILDCONSTR2" />
+    <Property Type="Int32" Name="POWER_MECH1" />
+    <Property Type="Int32" Name="POWER_MECH2" />
+    <Property Type="Int32" Name="ELEC1" />
+    <Property Type="Int32" Name="ELEC2" />
+    <Property Type="Int32" Name="DD1" />
+    <Property Type="Int32" Name="DD2" />
+    <Property Type="Int32" Name="AVIATION1" />
+    <Property Type="Int32" Name="AVIATION2" />
+    <Property Type="Int32" Name="COMP1" />
+    <Property Type="Int32" Name="COMP2" />
+    <Property Type="Int32" Name="COMP3" />
+    <Property Type="Int32" Name="FRENCH1" />
+    <Property Type="Int32" Name="FRENCH2" />
+    <Property Type="Int32" Name="FRENCH3" />
+    <Property Type="Int32" Name="GER1" />
+    <Property Type="Int32" Name="GER2" />
+    <Property Type="Int32" Name="GER3" />
+    <Property Type="Int32" Name="ARAB1" />
+    <Property Type="Int32" Name="ARAB2" />
+    <Property Type="Int32" Name="ARAB3" />
+    <Property Type="Int32" Name="KSL1" />
+    <Property Type="Int32" Name="KSL2" />
+    <Property Type="Int32" Name="KSL3" />
+    <Property Type="Int32" Name="MUSIC1" />
+    <Property Type="Int32" Name="MUSIC2" />
+    <Property Type="Int32" Name="MUSIC3" />
+    <Property Type="Int32" Name="BUS1" />
+    <Property Type="Int32" Name="BUS2" />
+  </EntityType>
+  <EntityType Name="Subject">
+    <Key>
+      <PropertyRef Name="Subject_ID" />
+    </Key>
+    <Property Name="Subject_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Subject_name" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Subject_group" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Subject_code" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Teacher">
+    <Key>
+      <PropertyRef Name="TID" />
+    </Key>
+    <Property Name="TID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Tfname" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Tlname" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Phone" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Email" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Gender" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Address" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Status" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="User_ID" />
+    </Key>
+    <Property Name="User_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="User_group" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="fname" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="lname" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="username" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="password" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="email" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="phone" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="date_created" Type="DateTime" Nullable="false" />
+    <Property Name="created_by" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Normal_exam_marks">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="Int32" Name="Student_ID" />
+    <Property Type="Int32" Name="Student_num" />
+    <Property Type="Int32" Name="Student_name" />
+    <Property Type="Int32" Name="Exam_ID" />
+    <Property Type="Int32" Name="Exam_name" />
+    <Property Type="Int32" Name="Exam_code" />
+    <Property Type="Int32" Name="Stream" />
+    <Property Type="Int32" Name="Class" />
+    <Property Type="Int32" Name="Class_year" />
+    <Property Type="Int32" Name="ENG" />
+    <Property Type="Int32" Name="KIS" />
+    <Property Type="Int32" Name="MAT_OPT" />
+    <Property Type="Int32" Name="MAT" />
+    <Property Type="Int32" Name="BIO" />
+    <Property Type="Int32" Name="PHYC" />
+    <Property Type="Int32" Name="CHEM" />
+    <Property Type="Int32" Name="GENSCI" />
+    <Property Type="Int32" Name="HIST" />
+    <Property Type="Int32" Name="GEO" />
+    <Property Type="Int32" Name="RELIGION" />
+    <Property Type="Int32" Name="RELIGION_MARKS" />
+    <Property Type="Int32" Name="GROUP4" />
+    <Property Type="Int32" Name="GROUP5" />
+  </EntityType>
+  <EntityType Name="Student">
+    <Key>
+      <PropertyRef Name="StudentID" />
+    </Key>
+    <Property Type="Int32" Name="StudentID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Student_number" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Student_name" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="DOB" Nullable="false" />
+    <Property Type="String" Name="Address" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Gender" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+</Schema>

@@ -1,0 +1,426 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EXAMModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="EXAMModelStoreContainer">
+    <EntitySet Name="Class_teachers" EntityType="EXAMModel.Store.Class_teachers" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Classes" EntityType="EXAMModel.Store.Classes" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Exams" EntityType="EXAMModel.Store.Exams" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Normal_exam_marks" EntityType="EXAMModel.Store.Normal_exam_marks" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Streams" EntityType="EXAMModel.Store.Streams" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Student_marks" EntityType="EXAMModel.Store.Student_marks" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Students" EntityType="EXAMModel.Store.Students" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Subjects" EntityType="EXAMModel.Store.Subjects" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Teachers" EntityType="EXAMModel.Store.Teachers" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Users" EntityType="EXAMModel.Store.Users" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="Class_teachers">
+    <Key>
+      <PropertyRef Name="CID" />
+    </Key>
+    <Property Name="CID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Fname" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Lname" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Class" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Stream" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Tid" Type="int" Nullable="false" />
+    <Property Name="Status" Type="nvarchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Classes">
+    <Key>
+      <PropertyRef Name="Class_ID" />
+    </Key>
+    <Property Name="Class_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Class_name" Type="nvarchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Exams">
+    <Key>
+      <PropertyRef Name="Exam_ID" />
+    </Key>
+    <Property Name="Exam_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Exam_code" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Exam_name" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="Exam_type" Type="nvarchar" MaxLength="50" />
+    <Property Name="Term" Type="int" Nullable="false" />
+    <Property Name="Week_no" Type="int" Nullable="false" />
+    <Property Name="Target_class" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Created_by" Type="nvarchar" MaxLength="255" />
+    <Property Name="Date_created" Type="datetime" Nullable="false" />
+    <Property Name="Status" Type="nvarchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Normal_exam_marks">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Student_ID" Type="int" />
+    <Property Name="Student_num" Type="int" />
+    <Property Name="Student_name" Type="int" />
+    <Property Name="Exam_ID" Type="int" />
+    <Property Name="Exam_name" Type="int" />
+    <Property Name="Exam_code" Type="int" />
+    <Property Name="Stream" Type="int" />
+    <Property Name="Class" Type="int" />
+    <Property Name="Class_year" Type="int" />
+    <Property Name="ENG" Type="int" />
+    <Property Name="KIS" Type="int" />
+    <Property Name="MAT_OPT" Type="int" />
+    <Property Name="MAT" Type="int" />
+    <Property Name="BIO" Type="int" />
+    <Property Name="PHYC" Type="int" />
+    <Property Name="CHEM" Type="int" />
+    <Property Name="GENSCI" Type="int" />
+    <Property Name="HIST" Type="int" />
+    <Property Name="GEO" Type="int" />
+    <Property Name="RELIGION" Type="int" />
+    <Property Name="RELIGION_MARKS" Type="int" />
+    <Property Name="GROUP4" Type="int" />
+    <Property Name="GROUP5" Type="int" />
+  </EntityType>
+  <EntityType Name="Streams">
+    <Key>
+      <PropertyRef Name="StreamID" />
+    </Key>
+    <Property Name="StreamID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Stream_name" Type="nvarchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Student_marks">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Student_ID" Type="int" Nullable="false" />
+    <Property Name="Student_num" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Student_name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ExamID" Type="int" Nullable="false" />
+    <Property Name="ExamName" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="ExamCode" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Stream" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Class" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="class_year" Type="int" Nullable="false" />
+    <Property Name="ENG" Type="int" Nullable="false" />
+    <Property Name="ENG1" Type="int" />
+    <Property Name="ENG2" Type="int" />
+    <Property Name="ENG3" Type="int" />
+    <Property Name="KISW" Type="int" Nullable="false" />
+    <Property Name="KISW1" Type="int" />
+    <Property Name="KISW2" Type="int" />
+    <Property Name="KISW3" Type="int" />
+    <Property Name="MATA" Type="int" />
+    <Property Name="MATA1" Type="int" />
+    <Property Name="MATA2" Type="int" />
+    <Property Name="MATB" Type="int" />
+    <Property Name="MATB1" Type="int" />
+    <Property Name="MATB2" Type="int" />
+    <Property Name="BIO" Type="int" />
+    <Property Name="BIO1" Type="int" />
+    <Property Name="BIO2" Type="int" />
+    <Property Name="BIO3" Type="int" />
+    <Property Name="CHEM" Type="int" />
+    <Property Name="CHEM1" Type="int" />
+    <Property Name="CHEM2" Type="int" />
+    <Property Name="CHEM3" Type="int" />
+    <Property Name="PHYC" Type="int" />
+    <Property Name="PHYC1" Type="int" />
+    <Property Name="PHYC2" Type="int" />
+    <Property Name="PHYC3" Type="int" />
+    <Property Name="GENSCI" Type="int" />
+    <Property Name="HIST" Type="int" />
+    <Property Name="HIST1" Type="int" />
+    <Property Name="HIST2" Type="int" />
+    <Property Name="CRE" Type="int" />
+    <Property Name="CRE1" Type="int" />
+    <Property Name="CRE2" Type="int" />
+    <Property Name="GEO" Type="int" />
+    <Property Name="GEO1" Type="int" />
+    <Property Name="GEO2" Type="int" />
+    <Property Name="IRE" Type="int" />
+    <Property Name="IRE1" Type="int" />
+    <Property Name="IRE2" Type="int" />
+    <Property Name="HRE" Type="int" />
+    <Property Name="HRE1" Type="int" />
+    <Property Name="HRE2" Type="int" />
+    <Property Name="HOMESCI" Type="int" />
+    <Property Name="HOMESCI1" Type="int" />
+    <Property Name="HOMESCI2" Type="int" />
+    <Property Name="HOMESCI3" Type="int" />
+    <Property Name="ART" Type="int" />
+    <Property Name="ART1" Type="int" />
+    <Property Name="ART2" Type="int" />
+    <Property Name="ART3" Type="int" />
+    <Property Name="AGRIC" Type="int" />
+    <Property Name="AGRIC1" Type="int" />
+    <Property Name="AGRIC2" Type="int" />
+    <Property Name="AGRIC3" Type="int" />
+    <Property Name="WOODW" Type="int" />
+    <Property Name="WOODW1" Type="int" />
+    <Property Name="WOODW2" Type="int" />
+    <Property Name="METALW" Type="int" />
+    <Property Name="METALW1" Type="int" />
+    <Property Name="METALW2" Type="int" />
+    <Property Name="BUILDCONSTR" Type="int" />
+    <Property Name="BUILDCONSTR1" Type="int" />
+    <Property Name="BUILDCONSTR2" Type="int" />
+    <Property Name="POWER_MECH" Type="int" />
+    <Property Name="POWER_MECH1" Type="int" />
+    <Property Name="POWER_MECH2" Type="int" />
+    <Property Name="ELEC" Type="int" />
+    <Property Name="ELEC1" Type="int" />
+    <Property Name="ELEC2" Type="int" />
+    <Property Name="DD" Type="int" />
+    <Property Name="DD1" Type="int" />
+    <Property Name="DD2" Type="int" />
+    <Property Name="AVIATION" Type="int" />
+    <Property Name="AVIATION1" Type="int" />
+    <Property Name="AVIATION2" Type="int" />
+    <Property Name="COMP" Type="int" />
+    <Property Name="COMP1" Type="int" />
+    <Property Name="COMP2" Type="int" />
+    <Property Name="COMP3" Type="int" />
+    <Property Name="FRENCH" Type="int" />
+    <Property Name="FRENCH1" Type="int" />
+    <Property Name="FRENCH2" Type="int" />
+    <Property Name="FRENCH3" Type="int" />
+    <Property Name="GER" Type="int" />
+    <Property Name="GER1" Type="int" />
+    <Property Name="GER2" Type="int" />
+    <Property Name="GER3" Type="int" />
+    <Property Name="ARAB" Type="int" />
+    <Property Name="ARAB1" Type="int" />
+    <Property Name="ARAB2" Type="int" />
+    <Property Name="ARAB3" Type="int" />
+    <Property Name="KSL" Type="int" />
+    <Property Name="KSL1" Type="int" />
+    <Property Name="KSL2" Type="int" />
+    <Property Name="KSL3" Type="int" />
+    <Property Name="MUSIC" Type="int" />
+    <Property Name="MUSIC1" Type="int" />
+    <Property Name="MUSIC2" Type="int" />
+    <Property Name="MUSIC3" Type="int" />
+    <Property Name="BUS" Type="int" />
+    <Property Name="BUS1" Type="int" />
+    <Property Name="BUS2" Type="int" />
+  </EntityType>
+  <EntityType Name="Students">
+    <Key>
+      <PropertyRef Name="StudentID" />
+    </Key>
+    <Property Name="StudentID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Student_number" Type="nvarchar" MaxLength="50" />
+    <Property Name="Student_name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="DOB" Type="date" Nullable="false" />
+    <Property Name="Address" Type="nvarchar" MaxLength="50" />
+    <Property Name="Gender" Type="nvarchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Subjects">
+    <Key>
+      <PropertyRef Name="Subject_ID" />
+    </Key>
+    <Property Name="Subject_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Subject_name" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Subject_group" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Subject_code" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Teachers">
+    <Key>
+      <PropertyRef Name="TID" />
+    </Key>
+    <Property Name="TID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Tfname" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Tlname" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Phone" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Email" Type="nvarchar(max)" />
+    <Property Name="Gender" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Address" Type="nvarchar" MaxLength="50" />
+    <Property Name="Status" Type="nvarchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="User_ID" />
+    </Key>
+    <Property Name="User_ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="User_group" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="fname" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="lname" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="username" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="password" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="email" Type="nvarchar(max)" />
+    <Property Name="phone" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="date_created" Type="datetime" Nullable="false" />
+    <Property Name="created_by" Type="nvarchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <Function Name="post_class_teachers" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Fname" Type="nvarchar" Mode="In" />
+    <Parameter Name="Lname" Type="nvarchar" Mode="In" />
+    <Parameter Name="Class" Type="nvarchar" Mode="In" />
+    <Parameter Name="Stream" Type="nvarchar" Mode="In" />
+    <Parameter Name="Tid" Type="int" Mode="In" />
+    <Parameter Name="Status" Type="nvarchar" Mode="In" />
+    <Parameter Name="type" Type="int" Mode="In" />
+  </Function>
+  <Function Name="post_classes" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="cname" Type="nvarchar" Mode="In" />
+    <Parameter Name="type" Type="int" Mode="In" />
+  </Function>
+  <Function Name="post_exams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Exam_code" Type="nvarchar" Mode="In" />
+    <Parameter Name="Exam_type" Type="nvarchar" Mode="In" />
+    <Parameter Name="Exam_name" Type="nvarchar" Mode="In" />
+    <Parameter Name="Term" Type="int" Mode="In" />
+    <Parameter Name="Week_no" Type="int" Mode="In" />
+    <Parameter Name="Target_class" Type="nvarchar" Mode="In" />
+    <Parameter Name="Created_by" Type="nvarchar" Mode="In" />
+    <Parameter Name="type" Type="int" Mode="In" />
+  </Function>
+  <Function Name="post_streams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="strname" Type="nvarchar" Mode="In" />
+    <Parameter Name="type" Type="int" Mode="In" />
+  </Function>
+  <Function Name="post_Student_marks" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Student_ID" Type="int" Mode="In" />
+    <Parameter Name="Student_num" Type="nvarchar" Mode="In" />
+    <Parameter Name="Student_name" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="ExamID" Type="int" Mode="In" />
+    <Parameter Name="ExamName" Type="nvarchar" Mode="In" />
+    <Parameter Name="ExamCode" Type="nvarchar" Mode="In" />
+    <Parameter Name="Stream" Type="nvarchar" Mode="In" />
+    <Parameter Name="Class" Type="nvarchar" Mode="In" />
+    <Parameter Name="class_year" Type="int" Mode="In" />
+    <Parameter Name="ENG" Type="int" Mode="In" />
+    <Parameter Name="ENG1" Type="int" Mode="In" />
+    <Parameter Name="ENG2" Type="int" Mode="In" />
+    <Parameter Name="ENG3" Type="int" Mode="In" />
+    <Parameter Name="KISW" Type="int" Mode="In" />
+    <Parameter Name="KISW1" Type="int" Mode="In" />
+    <Parameter Name="KISW2" Type="int" Mode="In" />
+    <Parameter Name="KISW3" Type="int" Mode="In" />
+    <Parameter Name="MATA" Type="int" Mode="In" />
+    <Parameter Name="MATA1" Type="int" Mode="In" />
+    <Parameter Name="MATA2" Type="int" Mode="In" />
+    <Parameter Name="MATB" Type="int" Mode="In" />
+    <Parameter Name="MATB1" Type="int" Mode="In" />
+    <Parameter Name="MATB2" Type="int" Mode="In" />
+    <Parameter Name="BIO" Type="int" Mode="In" />
+    <Parameter Name="BIO1" Type="int" Mode="In" />
+    <Parameter Name="BIO2" Type="int" Mode="In" />
+    <Parameter Name="BIO3" Type="int" Mode="In" />
+    <Parameter Name="CHEM" Type="int" Mode="In" />
+    <Parameter Name="CHEM1" Type="int" Mode="In" />
+    <Parameter Name="CHEM2" Type="int" Mode="In" />
+    <Parameter Name="CHEM3" Type="int" Mode="In" />
+    <Parameter Name="PHYC" Type="int" Mode="In" />
+    <Parameter Name="PHYC1" Type="int" Mode="In" />
+    <Parameter Name="PHYC2" Type="int" Mode="In" />
+    <Parameter Name="PHYC3" Type="int" Mode="In" />
+    <Parameter Name="GENSCI" Type="int" Mode="In" />
+    <Parameter Name="HIST" Type="int" Mode="In" />
+    <Parameter Name="HIST1" Type="int" Mode="In" />
+    <Parameter Name="HIST2" Type="int" Mode="In" />
+    <Parameter Name="CRE" Type="int" Mode="In" />
+    <Parameter Name="CRE1" Type="int" Mode="In" />
+    <Parameter Name="CRE2" Type="int" Mode="In" />
+    <Parameter Name="GEO" Type="int" Mode="In" />
+    <Parameter Name="GEO1" Type="int" Mode="In" />
+    <Parameter Name="GEO2" Type="int" Mode="In" />
+    <Parameter Name="IRE" Type="int" Mode="In" />
+    <Parameter Name="IRE1" Type="int" Mode="In" />
+    <Parameter Name="IRE2" Type="int" Mode="In" />
+    <Parameter Name="HRE" Type="int" Mode="In" />
+    <Parameter Name="HRE1" Type="int" Mode="In" />
+    <Parameter Name="HRE2" Type="int" Mode="In" />
+    <Parameter Name="HOMESCI" Type="int" Mode="In" />
+    <Parameter Name="HOMESCI1" Type="int" Mode="In" />
+    <Parameter Name="HOMESCI2" Type="int" Mode="In" />
+    <Parameter Name="HOMESCI3" Type="int" Mode="In" />
+    <Parameter Name="ART" Type="int" Mode="In" />
+    <Parameter Name="ART1" Type="int" Mode="In" />
+    <Parameter Name="ART2" Type="int" Mode="In" />
+    <Parameter Name="ART3" Type="int" Mode="In" />
+    <Parameter Name="AGRIC" Type="int" Mode="In" />
+    <Parameter Name="AGRIC1" Type="int" Mode="In" />
+    <Parameter Name="AGRIC2" Type="int" Mode="In" />
+    <Parameter Name="AGRIC3" Type="int" Mode="In" />
+    <Parameter Name="WOODW" Type="int" Mode="In" />
+    <Parameter Name="WOODW1" Type="int" Mode="In" />
+    <Parameter Name="WOODW2" Type="int" Mode="In" />
+    <Parameter Name="METALW" Type="int" Mode="In" />
+    <Parameter Name="METALW1" Type="int" Mode="In" />
+    <Parameter Name="METALW2" Type="int" Mode="In" />
+    <Parameter Name="BUILDCONSTR" Type="int" Mode="In" />
+    <Parameter Name="BUILDCONSTR1" Type="int" Mode="In" />
+    <Parameter Name="BUILDCONSTR2" Type="int" Mode="In" />
+    <Parameter Name="POWER_MECH" Type="int" Mode="In" />
+    <Parameter Name="POWER_MECH1" Type="int" Mode="In" />
+    <Parameter Name="POWER_MECH2" Type="int" Mode="In" />
+    <Parameter Name="ELEC" Type="int" Mode="In" />
+    <Parameter Name="ELEC1" Type="int" Mode="In" />
+    <Parameter Name="ELEC2" Type="int" Mode="In" />
+    <Parameter Name="DD" Type="int" Mode="In" />
+    <Parameter Name="DD1" Type="int" Mode="In" />
+    <Parameter Name="DD2" Type="int" Mode="In" />
+    <Parameter Name="AVIATION" Type="int" Mode="In" />
+    <Parameter Name="AVIATION1" Type="int" Mode="In" />
+    <Parameter Name="AVIATION2" Type="int" Mode="In" />
+    <Parameter Name="COMP" Type="int" Mode="In" />
+    <Parameter Name="COMP1" Type="int" Mode="In" />
+    <Parameter Name="COMP2" Type="int" Mode="In" />
+    <Parameter Name="COMP3" Type="int" Mode="In" />
+    <Parameter Name="FRENCH" Type="int" Mode="In" />
+    <Parameter Name="FRENCH1" Type="int" Mode="In" />
+    <Parameter Name="FRENCH2" Type="int" Mode="In" />
+    <Parameter Name="FRENCH3" Type="int" Mode="In" />
+    <Parameter Name="GER" Type="int" Mode="In" />
+    <Parameter Name="GER1" Type="int" Mode="In" />
+    <Parameter Name="GER2" Type="int" Mode="In" />
+    <Parameter Name="GER3" Type="int" Mode="In" />
+    <Parameter Name="ARAB" Type="int" Mode="In" />
+    <Parameter Name="ARAB1" Type="int" Mode="In" />
+    <Parameter Name="ARAB2" Type="int" Mode="In" />
+    <Parameter Name="ARAB3" Type="int" Mode="In" />
+    <Parameter Name="KSL" Type="int" Mode="In" />
+    <Parameter Name="KSL1" Type="int" Mode="In" />
+    <Parameter Name="KSL2" Type="int" Mode="In" />
+    <Parameter Name="KSL3" Type="int" Mode="In" />
+    <Parameter Name="MUSIC" Type="int" Mode="In" />
+    <Parameter Name="MUSIC1" Type="int" Mode="In" />
+    <Parameter Name="MUSIC2" Type="int" Mode="In" />
+    <Parameter Name="MUSIC3" Type="int" Mode="In" />
+    <Parameter Name="BUS" Type="int" Mode="In" />
+    <Parameter Name="BUS1" Type="int" Mode="In" />
+    <Parameter Name="BUS2" Type="int" Mode="In" />
+    <Parameter Name="type" Type="int" Mode="In" />
+  </Function>
+  <Function Name="post_Students" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Student_number" Type="nvarchar" Mode="In" />
+    <Parameter Name="Student_name" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="DOB" Type="date" Mode="In" />
+    <Parameter Name="Address" Type="nvarchar" Mode="In" />
+    <Parameter Name="Gender" Type="nvarchar" Mode="In" />
+    <Parameter Name="type" Type="int" Mode="In" />
+  </Function>
+  <Function Name="post_Subjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Subject_name" Type="nvarchar" Mode="In" />
+    <Parameter Name="Subject_group" Type="nvarchar" Mode="In" />
+    <Parameter Name="Subject_code" Type="int" Mode="In" />
+    <Parameter Name="type" Type="int" Mode="In" />
+  </Function>
+  <Function Name="post_Teachers" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Tfname" Type="nvarchar" Mode="In" />
+    <Parameter Name="Tlname" Type="nvarchar" Mode="In" />
+    <Parameter Name="Phone" Type="nvarchar" Mode="In" />
+    <Parameter Name="Email" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="Gender" Type="nvarchar" Mode="In" />
+    <Parameter Name="Address" Type="nvarchar" Mode="In" />
+    <Parameter Name="Status" Type="nvarchar" Mode="In" />
+    <Parameter Name="type" Type="int" Mode="In" />
+  </Function>
+  <Function Name="post_Users" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="User_group" Type="nvarchar" Mode="In" />
+    <Parameter Name="fname" Type="nvarchar" Mode="In" />
+    <Parameter Name="lname" Type="nvarchar" Mode="In" />
+    <Parameter Name="username" Type="nvarchar" Mode="In" />
+    <Parameter Name="password" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="email" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="phone" Type="nvarchar" Mode="In" />
+    <Parameter Name="created_by" Type="nvarchar" Mode="In" />
+    <Parameter Name="type" Type="int" Mode="In" />
+  </Function>
+</Schema>

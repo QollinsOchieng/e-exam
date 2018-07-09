@@ -1,0 +1,253 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="EXAMModelStoreContainer" CdmEntityContainer="EXAMEntities">
+    <EntitySetMapping Name="Class_teachers">
+      <EntityTypeMapping TypeName="EXAMModel.Class_teachers">
+        <MappingFragment StoreEntitySet="Class_teachers">
+          <ScalarProperty Name="CID" ColumnName="CID" />
+          <ScalarProperty Name="Fname" ColumnName="Fname" />
+          <ScalarProperty Name="Lname" ColumnName="Lname" />
+          <ScalarProperty Name="Class" ColumnName="Class" />
+          <ScalarProperty Name="Stream" ColumnName="Stream" />
+          <ScalarProperty Name="Tid" ColumnName="Tid" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Classes">
+      <EntityTypeMapping TypeName="EXAMModel.Class">
+        <MappingFragment StoreEntitySet="Classes">
+          <ScalarProperty Name="Class_ID" ColumnName="Class_ID" />
+          <ScalarProperty Name="Class_name" ColumnName="Class_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Exams">
+      <EntityTypeMapping TypeName="EXAMModel.Exam">
+        <MappingFragment StoreEntitySet="Exams">
+          <ScalarProperty Name="Exam_type" ColumnName="Exam_type" />
+          <ScalarProperty Name="Exam_ID" ColumnName="Exam_ID" />
+          <ScalarProperty Name="Exam_code" ColumnName="Exam_code" />
+          <ScalarProperty Name="Exam_name" ColumnName="Exam_name" />
+          <ScalarProperty Name="Term" ColumnName="Term" />
+          <ScalarProperty Name="Week_no" ColumnName="Week_no" />
+          <ScalarProperty Name="Target_class" ColumnName="Target_class" />
+          <ScalarProperty Name="Created_by" ColumnName="Created_by" />
+          <ScalarProperty Name="Date_created" ColumnName="Date_created" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Streams">
+      <EntityTypeMapping TypeName="EXAMModel.Stream">
+        <MappingFragment StoreEntitySet="Streams">
+          <ScalarProperty Name="StreamID" ColumnName="StreamID" />
+          <ScalarProperty Name="Stream_name" ColumnName="Stream_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Subjects">
+      <EntityTypeMapping TypeName="EXAMModel.Subject">
+        <MappingFragment StoreEntitySet="Subjects">
+          <ScalarProperty Name="Subject_ID" ColumnName="Subject_ID" />
+          <ScalarProperty Name="Subject_name" ColumnName="Subject_name" />
+          <ScalarProperty Name="Subject_group" ColumnName="Subject_group" />
+          <ScalarProperty Name="Subject_code" ColumnName="Subject_code" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Teachers">
+      <EntityTypeMapping TypeName="EXAMModel.Teacher">
+        <MappingFragment StoreEntitySet="Teachers">
+          <ScalarProperty Name="TID" ColumnName="TID" />
+          <ScalarProperty Name="Tfname" ColumnName="Tfname" />
+          <ScalarProperty Name="Tlname" ColumnName="Tlname" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="EXAMModel.User">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="User_ID" ColumnName="User_ID" />
+          <ScalarProperty Name="User_group" ColumnName="User_group" />
+          <ScalarProperty Name="fname" ColumnName="fname" />
+          <ScalarProperty Name="lname" ColumnName="lname" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="date_created" ColumnName="date_created" />
+          <ScalarProperty Name="created_by" ColumnName="created_by" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="post_students" FunctionName="EXAMModel.Store.post_Students" />
+    <EntitySetMapping Name="Normal_exam_marks">
+      <EntityTypeMapping TypeName="EXAMModel.Normal_exam_marks">
+        <MappingFragment StoreEntitySet="Normal_exam_marks">
+          <ScalarProperty Name="GROUP5" ColumnName="GROUP5" />
+          <ScalarProperty Name="GROUP4" ColumnName="GROUP4" />
+          <ScalarProperty Name="RELIGION_MARKS" ColumnName="RELIGION_MARKS" />
+          <ScalarProperty Name="RELIGION" ColumnName="RELIGION" />
+          <ScalarProperty Name="GEO" ColumnName="GEO" />
+          <ScalarProperty Name="HIST" ColumnName="HIST" />
+          <ScalarProperty Name="GENSCI" ColumnName="GENSCI" />
+          <ScalarProperty Name="CHEM" ColumnName="CHEM" />
+          <ScalarProperty Name="PHYC" ColumnName="PHYC" />
+          <ScalarProperty Name="BIO" ColumnName="BIO" />
+          <ScalarProperty Name="MAT" ColumnName="MAT" />
+          <ScalarProperty Name="MAT_OPT" ColumnName="MAT_OPT" />
+          <ScalarProperty Name="KIS" ColumnName="KIS" />
+          <ScalarProperty Name="ENG" ColumnName="ENG" />
+          <ScalarProperty Name="Class_year" ColumnName="Class_year" />
+          <ScalarProperty Name="Class" ColumnName="Class" />
+          <ScalarProperty Name="Stream" ColumnName="Stream" />
+          <ScalarProperty Name="Exam_code" ColumnName="Exam_code" />
+          <ScalarProperty Name="Exam_name" ColumnName="Exam_name" />
+          <ScalarProperty Name="Exam_ID" ColumnName="Exam_ID" />
+          <ScalarProperty Name="Student_name" ColumnName="Student_name" />
+          <ScalarProperty Name="Student_num" ColumnName="Student_num" />
+          <ScalarProperty Name="Student_ID" ColumnName="Student_ID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Students">
+      <EntityTypeMapping TypeName="EXAMModel.Student">
+        <MappingFragment StoreEntitySet="Students">
+          <ScalarProperty Name="StudentID" ColumnName="StudentID" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="DOB" ColumnName="DOB" />
+          <ScalarProperty Name="Student_name" ColumnName="Student_name" />
+          <ScalarProperty Name="Student_number" ColumnName="Student_number" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Student_marks">
+      <EntityTypeMapping TypeName="IsTypeOf(EXAMModel.Student_marks)">
+        <MappingFragment StoreEntitySet="Student_marks">
+          <ScalarProperty Name="BUS2" ColumnName="BUS2" />
+          <ScalarProperty Name="BUS1" ColumnName="BUS1" />
+          <ScalarProperty Name="BUS" ColumnName="BUS" />
+          <ScalarProperty Name="MUSIC3" ColumnName="MUSIC3" />
+          <ScalarProperty Name="MUSIC2" ColumnName="MUSIC2" />
+          <ScalarProperty Name="MUSIC1" ColumnName="MUSIC1" />
+          <ScalarProperty Name="MUSIC" ColumnName="MUSIC" />
+          <ScalarProperty Name="KSL3" ColumnName="KSL3" />
+          <ScalarProperty Name="KSL2" ColumnName="KSL2" />
+          <ScalarProperty Name="KSL1" ColumnName="KSL1" />
+          <ScalarProperty Name="KSL" ColumnName="KSL" />
+          <ScalarProperty Name="ARAB3" ColumnName="ARAB3" />
+          <ScalarProperty Name="ARAB2" ColumnName="ARAB2" />
+          <ScalarProperty Name="ARAB1" ColumnName="ARAB1" />
+          <ScalarProperty Name="ARAB" ColumnName="ARAB" />
+          <ScalarProperty Name="GER3" ColumnName="GER3" />
+          <ScalarProperty Name="GER2" ColumnName="GER2" />
+          <ScalarProperty Name="GER1" ColumnName="GER1" />
+          <ScalarProperty Name="GER" ColumnName="GER" />
+          <ScalarProperty Name="FRENCH3" ColumnName="FRENCH3" />
+          <ScalarProperty Name="FRENCH2" ColumnName="FRENCH2" />
+          <ScalarProperty Name="FRENCH1" ColumnName="FRENCH1" />
+          <ScalarProperty Name="FRENCH" ColumnName="FRENCH" />
+          <ScalarProperty Name="COMP3" ColumnName="COMP3" />
+          <ScalarProperty Name="COMP2" ColumnName="COMP2" />
+          <ScalarProperty Name="COMP1" ColumnName="COMP1" />
+          <ScalarProperty Name="COMP" ColumnName="COMP" />
+          <ScalarProperty Name="AVIATION2" ColumnName="AVIATION2" />
+          <ScalarProperty Name="AVIATION1" ColumnName="AVIATION1" />
+          <ScalarProperty Name="AVIATION" ColumnName="AVIATION" />
+          <ScalarProperty Name="DD2" ColumnName="DD2" />
+          <ScalarProperty Name="DD1" ColumnName="DD1" />
+          <ScalarProperty Name="DD" ColumnName="DD" />
+          <ScalarProperty Name="ELEC2" ColumnName="ELEC2" />
+          <ScalarProperty Name="ELEC1" ColumnName="ELEC1" />
+          <ScalarProperty Name="ELEC" ColumnName="ELEC" />
+          <ScalarProperty Name="POWER_MECH2" ColumnName="POWER_MECH2" />
+          <ScalarProperty Name="POWER_MECH1" ColumnName="POWER_MECH1" />
+          <ScalarProperty Name="POWER_MECH" ColumnName="POWER_MECH" />
+          <ScalarProperty Name="BUILDCONSTR2" ColumnName="BUILDCONSTR2" />
+          <ScalarProperty Name="BUILDCONSTR1" ColumnName="BUILDCONSTR1" />
+          <ScalarProperty Name="BUILDCONSTR" ColumnName="BUILDCONSTR" />
+          <ScalarProperty Name="METALW2" ColumnName="METALW2" />
+          <ScalarProperty Name="METALW1" ColumnName="METALW1" />
+          <ScalarProperty Name="METALW" ColumnName="METALW" />
+          <ScalarProperty Name="WOODW2" ColumnName="WOODW2" />
+          <ScalarProperty Name="WOODW1" ColumnName="WOODW1" />
+          <ScalarProperty Name="WOODW" ColumnName="WOODW" />
+          <ScalarProperty Name="AGRIC3" ColumnName="AGRIC3" />
+          <ScalarProperty Name="AGRIC2" ColumnName="AGRIC2" />
+          <ScalarProperty Name="AGRIC1" ColumnName="AGRIC1" />
+          <ScalarProperty Name="AGRIC" ColumnName="AGRIC" />
+          <ScalarProperty Name="ART3" ColumnName="ART3" />
+          <ScalarProperty Name="ART2" ColumnName="ART2" />
+          <ScalarProperty Name="ART1" ColumnName="ART1" />
+          <ScalarProperty Name="ART" ColumnName="ART" />
+          <ScalarProperty Name="HOMESCI3" ColumnName="HOMESCI3" />
+          <ScalarProperty Name="HOMESCI2" ColumnName="HOMESCI2" />
+          <ScalarProperty Name="HOMESCI1" ColumnName="HOMESCI1" />
+          <ScalarProperty Name="HOMESCI" ColumnName="HOMESCI" />
+          <ScalarProperty Name="HRE2" ColumnName="HRE2" />
+          <ScalarProperty Name="HRE1" ColumnName="HRE1" />
+          <ScalarProperty Name="HRE" ColumnName="HRE" />
+          <ScalarProperty Name="IRE2" ColumnName="IRE2" />
+          <ScalarProperty Name="IRE1" ColumnName="IRE1" />
+          <ScalarProperty Name="IRE" ColumnName="IRE" />
+          <ScalarProperty Name="GEO2" ColumnName="GEO2" />
+          <ScalarProperty Name="GEO1" ColumnName="GEO1" />
+          <ScalarProperty Name="GEO" ColumnName="GEO" />
+          <ScalarProperty Name="CRE2" ColumnName="CRE2" />
+          <ScalarProperty Name="CRE1" ColumnName="CRE1" />
+          <ScalarProperty Name="CRE" ColumnName="CRE" />
+          <ScalarProperty Name="HIST2" ColumnName="HIST2" />
+          <ScalarProperty Name="HIST1" ColumnName="HIST1" />
+          <ScalarProperty Name="HIST" ColumnName="HIST" />
+          <ScalarProperty Name="GENSCI" ColumnName="GENSCI" />
+          <ScalarProperty Name="PHYC3" ColumnName="PHYC3" />
+          <ScalarProperty Name="PHYC2" ColumnName="PHYC2" />
+          <ScalarProperty Name="PHYC1" ColumnName="PHYC1" />
+          <ScalarProperty Name="PHYC" ColumnName="PHYC" />
+          <ScalarProperty Name="CHEM3" ColumnName="CHEM3" />
+          <ScalarProperty Name="CHEM2" ColumnName="CHEM2" />
+          <ScalarProperty Name="CHEM1" ColumnName="CHEM1" />
+          <ScalarProperty Name="CHEM" ColumnName="CHEM" />
+          <ScalarProperty Name="BIO3" ColumnName="BIO3" />
+          <ScalarProperty Name="BIO2" ColumnName="BIO2" />
+          <ScalarProperty Name="BIO1" ColumnName="BIO1" />
+          <ScalarProperty Name="BIO" ColumnName="BIO" />
+          <ScalarProperty Name="MATB2" ColumnName="MATB2" />
+          <ScalarProperty Name="MATB1" ColumnName="MATB1" />
+          <ScalarProperty Name="MATB" ColumnName="MATB" />
+          <ScalarProperty Name="MATA2" ColumnName="MATA2" />
+          <ScalarProperty Name="MATA1" ColumnName="MATA1" />
+          <ScalarProperty Name="MATA" ColumnName="MATA" />
+          <ScalarProperty Name="KISW3" ColumnName="KISW3" />
+          <ScalarProperty Name="KISW2" ColumnName="KISW2" />
+          <ScalarProperty Name="KISW1" ColumnName="KISW1" />
+          <ScalarProperty Name="KISW" ColumnName="KISW" />
+          <ScalarProperty Name="ENG3" ColumnName="ENG3" />
+          <ScalarProperty Name="ENG2" ColumnName="ENG2" />
+          <ScalarProperty Name="ENG1" ColumnName="ENG1" />
+          <ScalarProperty Name="ENG" ColumnName="ENG" />
+          <ScalarProperty Name="class_year" ColumnName="class_year" />
+          <ScalarProperty Name="Class" ColumnName="Class" />
+          <ScalarProperty Name="Stream" ColumnName="Stream" />
+          <ScalarProperty Name="ExamCode" ColumnName="ExamCode" />
+          <ScalarProperty Name="ExamName" ColumnName="ExamName" />
+          <ScalarProperty Name="ExamID" ColumnName="ExamID" />
+          <ScalarProperty Name="Student_name" ColumnName="Student_name" />
+          <ScalarProperty Name="Student_num" ColumnName="Student_num" />
+          <ScalarProperty Name="Student_ID" ColumnName="Student_ID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="post_streams" FunctionName="EXAMModel.Store.post_streams" />
+    <FunctionImportMapping FunctionImportName="post_exam" FunctionName="EXAMModel.Store.post_exams" />
+  </EntityContainerMapping>
+</Mapping>
